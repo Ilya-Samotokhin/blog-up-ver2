@@ -15,3 +15,19 @@
 	display: flex;
 	gap: 20px;
 }
+
+.post__date {
+	color: aqua;
+}
+
+.post__title {
+	font-size: 28px;
+}
+
+.validationMassage {
+	color: red;
+}
+
+.validationMassage-hidden {
+	display: none;
+}
