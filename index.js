@@ -15,7 +15,6 @@ newPostBtnNode.addEventListener('click', function () {
 	const postFromUser = getPostFromUser()
 	// сохранить пост
 	addPost(postFromUser)
-
 	// отобразить пост
 	renderPosts()
 })

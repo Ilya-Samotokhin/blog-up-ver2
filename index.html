@@ -7,18 +7,25 @@
   <title>Blog up</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./resourse/favic.svg" type="image/x-icon">
 </head>
 
 <body>
   <div class="container">
+    <div class="header">
+      <div class="header__icon"> <img src="./resourse/favic.svg" alt="icon"></div>
+      <h1 class="header__title">Твой личный Блог</h1>
+    </div>
     <div class="row">
+
       <div class="col col__left">
-        <h2 class="post-header">Новый пост</h2>
+
+        <h2 class="post-title">Новый пост</h2>
 
         <input type="text" class="js-post-title-input post-title-input" placeholder="Заголовок">
         <textarea name="text" class="js-post-text-input post-text-input" cols="30" rows="10"
           placeholder="Текст"></textarea>
-        <p class="js-count__char count__char">0/20</p>
+        <p class="js-count__char count__char">0/500</p>
 
         <button class="js-new-post-btn new-post-btn" disabled>Опубликовать</button>
         <div class="validationMassage validationMassage-hidden js-validationMassage">Длинна заголовка не должна
@@ -27,7 +34,7 @@
       </div>
 
       <div class="col col__right">
-        <h2 class="post-header">Лента</h2>
+        <h2 class="post-title">Лента</h2>
 
         <div class="js-posts posts">
           Лента пустая...
