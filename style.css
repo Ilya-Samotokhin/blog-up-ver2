@@ -4,7 +4,8 @@
 }
 
 .container {
-	height: 100vh;
+	min-height: 100vh;
+	background-color: #1a1a1d;
 }
 
 .header {
@@ -36,19 +37,22 @@
 }
 
 .col__left {
-	background-color: #1a1a1d;
+	/* background-color: #1a1a1d; */
 	width: 30%;
 }
 
 .col__right {
 	width: 70%;
+	padding: 20px 100px;
 	background-color: #1f2833;
+	border-radius: 10px;
 }
 
 .post-title {
 	font-size: 28px;
 	line-height: 44px;
 	color: #66fcf1;
+	margin-bottom: 20px;
 }
 
 .post-title-input {
@@ -85,12 +89,28 @@
 	color: #c5c6c757;
 }
 
+.posts {
+	transition: all ease-in 0.5s;
+}
+
+.post {
+	margin-bottom: 20px;
+	border-radius: 10px;
+	border: 1px solid #66fcf1;
+	padding: 20px 10px 5px;
+}
+
 .post__date {
-	color: #66fcf1;
+	text-align: end;
+	font-size: 14px;
+	color: #66fcf28c;
 }
 
 .post__title {
-	font-size: 28px;
+	color: #66fcf1;
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 5px;
 }
 
 .validationMassage {

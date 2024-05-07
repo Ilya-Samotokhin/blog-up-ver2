@@ -1,7 +1,7 @@
 const posts = []
 
-const TITLE_VALIDATION_LIMIT = 10
-const TEXT_VALIDATION_LIMIT = 20
+const TITLE_VALIDATION_LIMIT = 100
+const TEXT_VALIDATION_LIMIT = 500
 
 const postTitleInputNode = document.querySelector('.js-post-title-input')
 const postTextInputNode = document.querySelector('.js-post-text-input')
@@ -17,6 +17,8 @@ newPostBtnNode.addEventListener('click', function () {
 	addPost(postFromUser)
 	// отобразить пост
 	renderPosts()
+	// очистка input
+	clearInput()
 })
 
 function getPostFromUser() {
@@ -49,10 +51,10 @@ function renderPosts() {
 
 	posts.forEach(post => {
 		postsHTML += `
-		<div class='posts'>
-			<p class='post__date'>${post.date}</p>
-			<p class='post__title'>${post.title}</p>
-			<p class='post__text'>${post.text}</p>
+		<div class='post'>
+		<p class='post__title'>${post.title}</p>
+		<p class='post__text'>${post.text}</p>
+		<p class='post__date'>${post.date}</p>
 		</div>
 	`
 	})
@@ -78,8 +80,6 @@ function getDate(date) {
 	)}`
 	return result
 }
-
-//
 
 // validation
 
@@ -117,4 +117,21 @@ function validation() {
 //counter
 function countingCharacters() {
 	countChar.innerText = `${postTextInputNode.value.length}/${TEXT_VALIDATION_LIMIT}`
+}
+
+// по нажатию на enter происходит нажатие на кнопку ОПУБЛИКОВАТЬ
+postTextInputNode.addEventListener('keydown', function (event) {
+	if (event.keyCode == 13 && (event.ctrlKey || event.metaKey)) {
+		event.preventDefault
+		newPostBtnNode.click()
+		clearInput()
+		//перенос фокуса на заголовок для нового поста
+		postTitleInputNode.focus()
+	}
+})
+
+//clearInput
+function clearInput() {
+	postTitleInputNode.value = ''
+	postTextInputNode.value = ''
 }
