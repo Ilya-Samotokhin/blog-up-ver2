@@ -29,6 +29,7 @@
 
 .row {
 	display: flex;
+	padding: 0 20px;
 }
 
 .col {
@@ -130,4 +131,52 @@
 	position: relative;
 	justify-content: end;
 	margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+	.row {
+		display: block;
+	}
+
+	.col {
+		padding: 0px;
+	}
+
+	.col__left {
+		width: 100%;
+		padding: 20px 100px 50px;
+	}
+
+	.col__right {
+		width: 100%;
+		padding: 20px 100px;
+		background-color: #1f2833;
+		border-radius: 10px;
+	}
+}
+
+@media (max-width: 650px) {
+	.col__left {
+		width: 100%;
+		padding: 20px 40px 50px;
+	}
+
+	.col__right {
+		width: 100%;
+		padding: 20px 40px;
+		background-color: #1f2833;
+		border-radius: 10px;
+	}
+
+	.header {
+		padding: 20px 60px;
+	}
+
+	.header__title {
+		font-size: 22px;
+	}
+	.post-title {
+		font-size: 22px;
+		line-height: 30px;
+	}
 }
