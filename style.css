@@ -33,11 +33,9 @@
 
 .col {
 	padding: 20px;
-	height: 100vh;
 }
 
 .col__left {
-	/* background-color: #1a1a1d; */
 	width: 30%;
 }
 
@@ -90,7 +88,8 @@
 }
 
 .posts {
-	transition: all ease-in 0.5s;
+	display: flex;
+	flex-direction: column-reverse;
 }
 
 .post {
@@ -111,6 +110,11 @@
 	font-weight: bold;
 	font-size: 20px;
 	margin-bottom: 5px;
+	word-wrap: break-word;
+}
+
+.post__text {
+	word-wrap: break-word;
 }
 
 .validationMassage {
