@@ -134,4 +134,5 @@ postTextInputNode.addEventListener('keydown', function (event) {
 function clearInput() {
 	postTitleInputNode.value = ''
 	postTextInputNode.value = ''
+	newPostBtnNode.disabled = true
 }
